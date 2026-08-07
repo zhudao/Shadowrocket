@@ -4,13 +4,11 @@
 
 > [!NOTE]
 > 
-> 本使用手册基于 **[Shadowrocket 官方群组](https://t.me/ShadowrocketApp)** 维护的关键词列表编写，并结合社区反馈持续更新完善，涵盖 Shadowrocket 大部分功能说明、使用方法及部分常见问题，力求为用户提供一份完整、易读的参考文档
+> 本使用手册基于 **[Shadowrocket 官方群组](https://t.me/ShadowrocketApp)** 维护的关键词列表编写，并结合更新日志及社区反馈持续更新完善，覆盖 **Shadowrocket 正式版** 及 **TestFlight 测试版** 大部分功能说明、使用方法及部分常见问题。软件的部分功能可能因版本迭代存在调整、优化或删改，具体内容请以实际版本为准
 > 
-> 本仓库为 **非官方项目**，与 [Shadow Launch Technology Limited](https://shadowlaunch.com) 无任何关联，仅由社区进行更新维护。谨向原关键词列表作者及所有为相关项目作出贡献的开发者、维护者和社区成员致以诚挚感谢
+> **使用本手册及相关软件时，请遵守当地法律法规，并自行承担相关责任**
 > 
-> 使用本手册及相关软件时，请遵守当地法律法规，并自行承担相关责任
-> 
-> 更多配置示例、主题配色及扩展资源，请参阅「**[配色与配置](https://github.com/LOWERTOP/Shadowrocket-First)**」仓库
+> 本仓库为 **非官方项目**，与 [Shadow Launch Technology Limited](https://shadowlaunch.com) 无任何关联，仅由社区进行更新维护。谨向原关键词列表作者及所有为相关项目作出贡献的开发者、维护者和社区成员致以诚挚感谢。更多配置示例、主题配色及扩展资源，请参阅「**[配色与配置](https://github.com/LOWERTOP/Shadowrocket-First)**」仓库
 
 > [!TIP]
 > 
@@ -34,7 +32,7 @@
 
 > 官方群组：[Shadowrocket App](https://t.me/ShadowrocketApp)<br>
 > 官方频道：[Shadowrocket News](https://t.me/ShadowrocketNews)<br>
-> 反馈邮箱：[buginapp@gmail.com](mailto:buginapp@gmail.com)
+> 官方邮箱：[buginapp@gmail.com](mailto:buginapp@gmail.com)
 
 ## [使用目录](https://github.com/LOWERTOP/Shadowrocket)
 
@@ -544,6 +542,10 @@
 > **DNS覆写 `dns-server`**
 > 
 > > 使用普通 DNS 或加密 DNS（如 `doh`、`doq`、`dot` 等）覆盖默认的系统 DNS。DNS 覆写仅针对直连类域名进行解析，代理类域名将经由代理服务器进行解析。DNS 覆写支持同时添加多个地址，Shadowrocket 采用并行查询的方式进行解析请求，最先返回的结果将被采用。有些 `dns over https` 支持 `http3`，所以将会尝试查询，如果支持就切换到 `http3`，可在 **doh链接** 后面加上 `#no-h3` 关闭。`doh` 强制通过 `h3` 查询的写法是将 `https` 改成 `h3`，如`h3://dns.alidns.com/dns-query`。其他示例或写法参见：[修改DNS](#修改dns)、[DNS-over-PROXY](#dns-over-proxy)
+> 
+> **直连DNS `direct-dns-server`**
+> 
+> > 用于解析匹配直连域名规则的域名。如果不设置此项则默认使用 DNS 覆写；如果设置此项但解析失败，则回退至备用 DNS 解析
 > 
 > **备用DNS `fallback-dns-server`**
 > 
@@ -1334,8 +1336,6 @@
 > 
 > * iCloud 服务中断、网络连接问题以及其他复杂原因可能导致 iCloud 同步异常，这种情况建议选择手动删除 iCloud 备份并重新同步数据
 > 
-> * iCloud 同步机制存在一定系统级限制，Shadowrocket 仅可以同步添加节点，做不到同步删除节点，若出现自动恢复了已经删除的节点，可以尝试删除 iCloud 节点备份后重新同步
-> 
 > * 添加的 **场景** 和 **分组** 不属于 iCloud 自动同步的数据类型，需要手动备份下载，才能在设备间共享数据
 
 > [!TIP]
@@ -1573,6 +1573,10 @@
 >   
 >   * 需要注意 [TUN旁路路由](#通用参数) `tun-excluded-routes` 内若包含 `100.64.0.0/10` 网段可能对 Tailscale 有一定影响，参见 [Tailscale IP 地址](https://tailscale.com/docs/concepts/tailscale-ip-addresses) 以及 [CGNAT 冲突排查](https://tailscale.com/docs/reference/troubleshooting/network-configuration/cgnat-conflicts)
 >   
+> * **低电量模式**
+>   
+>   开启时，Tailscale 将在首次完成网络同步后于空闲状态下释放网络资源，并在需要时自动恢复连接。空闲期间不会更新网络状态
+> 
 > * **认证密钥**
 >   
 >   填写并使用来自 Tailscale 管理控制台的可复用或临时 **[认证密钥](https://tailscale.com/docs/features/access-control/auth-keys)**，使设备无需登录即可加入 Tailscale 网络
