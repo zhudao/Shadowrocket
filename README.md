@@ -1,4 +1,4 @@
-[![Translate to English](https://img.shields.io/static/v1?label=Translate&message=to%20English&color=blue&logo=googletranslate&logoColor=white&labelColor=grey&messageColor=white)](https://translate.google.com/translate?hl=en&sl=zh-CN&tl=en&u=https://github.com/LOWERTOP/Shadowrocket/wiki "Google Translate")
+[![Translate to English](https://img.shields.io/static/v1?label=Translate&message=to%20English&color=blue&logo=googletranslate&logoColor=white&labelColor=grey&messageColor=white)](https://translate.google.com/translate?hl=en&sl=zh-CN&tl=en&u=https://lowertop.github.io/Shadowrocket "Google Translate")
 
 [![Shadowrocket](https://socialify.git.ci/LOWERTOP/Shadowrocket/image?custom_description=%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C%0AUser+Manual&description=1&font=Rokkitt&logo=https%3A%2F%2Fraw.githubusercontent.com%2FLOWERTOP%2FShadowrocket-First%2Frefs%2Fheads%2Fmain%2Fimg%2FShadowrocket.png&name=1&pattern=Plus&theme=Light)](https://github.com/LOWERTOP/Shadowrocket "仓库地址")
 
@@ -31,14 +31,16 @@
 > **[Shadowrocket](https://apps.apple.com/us/app/shadowrocket/id932747118)**（中文用户常称为 **小火箭**）是由 **[Shadow Launch Technology Limited](https://shadowlaunch.com)** 开发的一款面向 Apple 平台的网络工具，用于配置和管理网络服务，支持 iPhone、iPad、Mac 和 Apple TV 等设备<br>
 > 软件不提供任何服务器资源，用户可根据需要自行配置相关服务
 
-> 官方群组：[Shadowrocket App](https://t.me/ShadowrocketApp)<br>
+> 使用手册：[Shadowrocket.dpdns.org](https://lowertop.github.io/Shadowrocket/)<br>
+> 反馈邮箱：[buginapp@gmail.com](mailto:buginapp@gmail.com)<br>
 > 官方频道：[Shadowrocket News](https://t.me/ShadowrocketNews)<br>
-> 官方邮箱：[buginapp@gmail.com](mailto:buginapp@gmail.com)
+> 官方群组：[Shadowrocket App](https://t.me/ShadowrocketApp)
 
 ## [使用目录](https://github.com/LOWERTOP/Shadowrocket)
 
 > 点击 **目录标题** 可以快速定位到相关正文<br>
-> 点击正文的 **蓝色标题** 可以快速回到目录
+> 点击正文的 **蓝色标题** 可以快速回到目录<br>
+> 可访问 **[发布页面](https://lowertop.github.io/Shadowrocket/)** 查看，支持关键词检索
 
 > * [首页](#软件首页)
 >     * [快速使用方法](#快速使用方法)
